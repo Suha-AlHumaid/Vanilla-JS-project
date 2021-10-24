@@ -1,29 +1,46 @@
+$(document).ready(function(){
+//  console.log("hi");
+    // $(`#imgBannerDiv`).animate({top:: '500px'});
+    $("#imgBannerDiv").animate({
+        // bottom: '250px',
+        // height: '+=150px',
+        // width: '+=150px',
+        marginTop:'0px' ,
+        transitionDuration: '2s'
+      });
+      $("#contentBanner").animate({
+        // bottom: '250px',
+        // height: '+=150px',
+        // width: '+=150px',
+        marginTop:'300px' ,
+        transitionDuration: '2s'
+      });
+});
+
 const works =[
- {client:"website0",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
- {client:"website1",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
- {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
- {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
- {client:"website3",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
+ {client:"website0",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
+ {client:"website1",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
+ {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
+ {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
+ {client:"website3",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
 
 ];
 
 const randerWork= (index) =>{
     $("#home").hide();
     $('#workPage').addClass("showWork");
-    
     $('#workPage').append(
-    
         `    <div>
-        <h3>Client: <span>${elem.client}</span></h3>
-        <h3>Created: <span>${elem.created}</span></h3>
-        <h3>Teachnologies: <span>${elem.tech}</span></h3>
-        <img src="${elem.imgUrl}" alt="">
-        <img src="${elem.imgUrl2}" alt="">
-        <img src="${elem.imgUrl3}" alt="">
+        <h3>Client: <span>${works[index].client}</span></h3>
+        <h3>Created: <span>${works[index].created}</span></h3>
+        <h3>Teachnologies: <span>${works[index].tech}</span></h3>
+        <img src="${works[index].imgUrl}" alt="">
+        <img src="${works[index].imgUrl2}" alt="">
+        <img src="${works[index].imgUrl3}" alt="">
     </div>`
       );
-
-}
+//end of foeEach
+};
 
 const randerWorks = () => {
 
@@ -32,7 +49,7 @@ const randerWorks = () => {
 
       $("#cards").append(
         //  `<h1>hi</h1>`
-        `<div class="card" id="card${index}"><img src="${works[index].imgUrl}"" alt="" id="imgCard${index}"/></div>`
+        `<div class="grid-item" id="card${index}"><img src="${works[index].imgUrl}"" alt="" id="imgCard${index}"/></div>`
       );
       $(`#card${index}`).click(()=>randerWork(index));
       //end of loop
