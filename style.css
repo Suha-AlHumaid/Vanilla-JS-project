@@ -137,6 +137,7 @@ a {
     align-content: space-around;
     justify-content: flex-start;
     align-items: center;
+    background: rgb(242, 242, 242);
 }
 .parallax {
     /* The image used */
@@ -159,13 +160,13 @@ a {
 }
 .aboutImg{
     width: 50vw;
-    right: 0;
-    float: right;
+    /* right: 0; */
+    /* float: right; */
     border-radius: 50%;
 }
 #aboutImg {
-    width: 100%;
-    height: auto;
+    width: 500px;
+    height: 500px;
 }
 
 img {
