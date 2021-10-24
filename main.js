@@ -2,11 +2,12 @@ const works =[
  {client:"website0",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
  {client:"website1",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
  {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
+ {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
  {client:"website3",tech:`JS`, created: "2020" , imgUrl:`/bannerImg.jpeg`,imgUrl2:`/bannerImg.jpeg`,imgUrl3:`/bannerImg.jpeg`},
 
 ];
 
-const randerWork= (elem,index) =>{
+const randerWork= (index) =>{
     $("#home").hide();
     $('#workPage').addClass("showWork");
     
@@ -25,16 +26,33 @@ const randerWork= (elem,index) =>{
 }
 
 const randerWorks = () => {
-    $("cards").html("");
-    works.forEach((elem, index) => {
-        console.log(elem.imgUrl);
+
+    // works.forEach((elem, index) => {
+        for(let index=0; index<4; index++){
+
       $("#cards").append(
         //  `<h1>hi</h1>`
-        `<div class="card" id="card${index}"><img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/></div>`
+        `<div class="card" id="card${index}"><img src="${works[index].imgUrl}"" alt="" id="imgCard${index}"/></div>`
       );
-      $(`#card${index}`).click(()=>randerWork(elem,index));
+      $(`#card${index}`).click(()=>randerWork(index));
       //end of loop
-    });
+    // });
+      };
   };
 
   randerWorks();
+ 
+  const worksRander = ()=>{
+    $("#home").hide();
+    // $('#workPage').addClass("showWork");
+
+    works.forEach((elem, index) => { 
+      $("#workPage").append(
+        `<div class="card" id="card${index}"><img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/></div>`
+      );
+      
+      //end of loop
+    });
+
+  };
+  $("#portfolio").click(worksRander);
