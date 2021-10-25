@@ -38,12 +38,15 @@ const randerWork= (index) =>{
         <h3>Client: <span>${works[index].client}</span></h3>
         <h3>Created: <span>${works[index].created}</span></h3>
         <h3>Teachnologies: <span>${works[index].tech}</span></h3>
+        <a href="" ><span style="color: red;"class="fa fa-heart" aria-hidden="true">
+        </span></a>
         </div>
         <div class="grid" >
         <img class="discImg" src="${works[index].imgUrl}" alt="">
         <img class="discImg" src="${works[index].imgUrl2}" alt="">
         <img class="discImg" src="${works[index].imgUrl3}" alt="">
         </div>
+
     </div>`
       );
 //end of forEach

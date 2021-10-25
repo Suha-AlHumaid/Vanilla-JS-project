@@ -111,6 +111,7 @@ a {
     align-items: stretch;
     justify-content: space-around;
     align-content: flex-end;
+    margin-top: 15px;
 }
 #contentBanner {
     width: 35vw;
