@@ -22,10 +22,11 @@ const works =[
  {client:"website0",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
  {client:"website1",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
  {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
- {client:"website2",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
  {client:"website3",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
+ {client:"website4",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
 
 ];
+
 
 
 //rander of single page discription
@@ -55,7 +56,7 @@ const randerWork= (index) =>{
 //rander of partfilio
 const worksRander = ()=>{
     $("#home").hide();
-    // $('#workPage').addClass("showWork");
+    $('#workPage').addClass("showWork");
 
     works.forEach((elem, index) => { 
       $("#workPage").append(
@@ -66,7 +67,7 @@ const worksRander = ()=>{
     });
 
   };
-  $("#portfolio").click(worksRander);
+//   $("#portfolio").click(worksRander);
 
 
 //rander recent 4 work in home
@@ -80,11 +81,26 @@ const randerWorks = () => {
         `<div class="grid-item" id="card${index}"><img src="${works[index].imgUrl}"" alt="" id="imgCard${index}"/></div>`
       );
       $(`#card${index}`).click(()=>randerWork(index));
+
+    
+
+   
       //end of loop
     // });
       };
   };
 
   randerWorks();
- 
+ //rander of Portfolio page
+const randerPortfolio = () => {
+    works.forEach((elem,index)=>{
+  localStorage.setItem("portfolio",JSON.stringify(works));
+  location.replace("portfolio.html");
+  console.log(portfolio);
 
+});
+      //end of loop
+  };
+
+
+  ("#portfolioLink").click(randerPortfoli);
