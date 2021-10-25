@@ -19,6 +19,9 @@
 
   
 }
+.home {
+    margin: 70px auto;
+}
 h1{
  
     font-size: 5rem;
@@ -34,10 +37,11 @@ h2, h3,span{
 }
 /* Header */
 .header {
+   
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 120px;
     position: absolute;
@@ -45,14 +49,34 @@ h2, h3,span{
     left: 0;
     margin: 0;
     padding: 0;
+    z-index: 100;
+    border: 0;
+    margin-right: 25px;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+
+}
+.circleBG {
+     z-index: 0;
+    width: 1200px;
+    height: 1200px;
+    position: absolute;
+    top: -1000px;
+    /* left: -100px; */
+    /* right: 0; */
+    margin-bottom: 100px;
+    padding: 0;
     /* z-index: 100; */
     border: 0;
     border-style: solid;
     background: #f2f2f2;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2rem solid white;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
     transition: 0.5s;
     transition-delay: 0.3s;
+    border-radius: 50%;
 }
+
 .logoImg {
   width: 120px;
   height: 61px;
@@ -61,6 +85,7 @@ h2, h3,span{
 .navv{
     /* margin-right: 30px;
     text-align: right; */
+    /* z-index:100; */
 }
 .navU {
   list-style: none;
@@ -78,7 +103,7 @@ a {
 /* Banner */
 .banner {
     position: relative;
-    margin: 0px;
+    margin: 0;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -160,7 +185,6 @@ a {
 }
 .aboutImg{
     width: 40vw;
-
     border-radius: 50%;
 }
 #aboutImg {
@@ -199,22 +223,59 @@ img {
   }
   
   #workPage{
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left: 50px;
 }
-.discImg {
-    width: 600px;
-    height: 500px;
+.disc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
+.discContent {
+    width: 40%;
+    position: sticky;
+    top: 30%;
+    left: 0px;
+    padding-top: 50px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    /* width: 50%; */
+            /* The image used */
+            background-image: url("/circle.png");
+            /* Set a specific height */
+            min-height: 200px; 
+            /* Create the parallax scrolling effect */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            background-position:right;
+            background-size:20em;
+          
+}
+.discImg {
+    /* width: 600px;
+    height: 500px;
+    margin: 15px 0px;
+    border-radius: 50%; */
+    margin: 15px 0px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100vh;
+
+}
+
 /* Footer */
 .footer{
 
   width: 100%;
   height: 80px;
   text-align: center;
- 
   background-color: #333333;
-  /* box-shadow: 0 0 10px rgb(0 0 0 / 7%); */
+
+
 }
 
 .footer p{

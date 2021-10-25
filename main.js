@@ -33,13 +33,17 @@ const randerWork= (index) =>{
     $("#home").hide();
     $('#workPage').addClass("showWork");
     $('#workPage').append(
-        `    <div>
+        `    <div class="disc">
+        <div class="discContent">
         <h3>Client: <span>${works[index].client}</span></h3>
         <h3>Created: <span>${works[index].created}</span></h3>
         <h3>Teachnologies: <span>${works[index].tech}</span></h3>
+        </div>
+        <div class="grid" >
         <img class="discImg" src="${works[index].imgUrl}" alt="">
         <img class="discImg" src="${works[index].imgUrl2}" alt="">
         <img class="discImg" src="${works[index].imgUrl3}" alt="">
+        </div>
     </div>`
       );
 //end of forEach
