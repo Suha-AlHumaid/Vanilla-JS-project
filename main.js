@@ -90,17 +90,18 @@ const randerWorks = () => {
       };
   };
 
-  randerWorks();
+
  //rander of Portfolio page
 const randerPortfolio = () => {
-    works.forEach((elem,index)=>{
+   
+works.forEach((elem,index)=>{
+
   localStorage.setItem("portfolio",JSON.stringify(works));
   location.replace("portfolio.html");
-  console.log(portfolio);
 
 });
       //end of loop
   };
+$('#portfolioLink').click(randerPortfolio);
 
-
-  ("#portfolioLink").click(randerPortfoli);
+randerWorks();
