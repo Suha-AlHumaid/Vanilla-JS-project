@@ -1,6 +1,6 @@
+//  Header Anmation 
 $(document).ready(function(){
-//  console.log("hi");
-    // $(`#imgBannerDiv`).animate({top:: '500px'});
+
     $("#imgBannerDiv").animate({
         // bottom: '250px',
         // height: '+=150px',
@@ -17,6 +17,7 @@ $(document).ready(function(){
       });
 });
 
+//Informations
 const works =[
  {client:"website0",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
  {client:"website1",tech:`JS`, created: "2020" , imgUrl:`/img1.jpg`,imgUrl2:`/img1.jpg`,imgUrl3:`/img1.jpg`},
@@ -26,6 +27,8 @@ const works =[
 
 ];
 
+
+//rander of single page discription
 const randerWork= (index) =>{
     $("#home").hide();
     $('#workPage').addClass("showWork");
@@ -34,14 +37,32 @@ const randerWork= (index) =>{
         <h3>Client: <span>${works[index].client}</span></h3>
         <h3>Created: <span>${works[index].created}</span></h3>
         <h3>Teachnologies: <span>${works[index].tech}</span></h3>
-        <img src="${works[index].imgUrl}" alt="">
-        <img src="${works[index].imgUrl2}" alt="">
-        <img src="${works[index].imgUrl3}" alt="">
+        <img class="discImg" src="${works[index].imgUrl}" alt="">
+        <img class="discImg" src="${works[index].imgUrl2}" alt="">
+        <img class="discImg" src="${works[index].imgUrl3}" alt="">
     </div>`
       );
-//end of foeEach
+//end of forEach
 };
+  
+//rander of partfilio
+const worksRander = ()=>{
+    $("#home").hide();
+    // $('#workPage').addClass("showWork");
 
+    works.forEach((elem, index) => { 
+      $("#workPage").append(
+        `<div class="card" id="card${index}"><img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/></div>`
+      );
+      
+      //end of loop
+    });
+
+  };
+  $("#portfolio").click(worksRander);
+
+
+//rander recent 4 work in home
 const randerWorks = () => {
 
     // works.forEach((elem, index) => {
@@ -59,17 +80,4 @@ const randerWorks = () => {
 
   randerWorks();
  
-  const worksRander = ()=>{
-    $("#home").hide();
-    // $('#workPage').addClass("showWork");
 
-    works.forEach((elem, index) => { 
-      $("#workPage").append(
-        `<div class="card" id="card${index}"><img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/></div>`
-      );
-      
-      //end of loop
-    });
-
-  };
-  $("#portfolio").click(worksRander);
