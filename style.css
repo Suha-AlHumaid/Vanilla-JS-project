@@ -1,8 +1,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  /* width: 100%; */
-  /* color: #6a727f; */
   color: #111111;
   font-family: raleway, sans-serif;
 }
@@ -15,8 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   color: #111111;
-  /* background-color: rgb(242, 242, 242); */
-  /* position: absolute; */
 }
 .home {
   margin: 70px auto;
@@ -26,8 +22,6 @@ h1 {
   font-size: 5rem;
 }
 p {
-  /* padding-top: 20px;
-    font-size: 1rem; */
   font-weight: 400;
   font-size: 1.125rem;
   margin: 20px 0 0;
@@ -41,7 +35,6 @@ span {
   font-size: 3.75rem;
   font-weight: 300;
   text-transform: uppercase;
-  /* margin: 0 auto 0 0; */
 }
 /* Header */
 .header {
@@ -61,7 +54,6 @@ span {
   margin-right: 25px;
   transition: 0.5s;
   transition-delay: 0.3s;
-  /* background: #f2f2f2; */
 }
 .circleBG {
   z-index: 0;
@@ -69,16 +61,12 @@ span {
   height: 1200px;
   position: absolute;
   top: -1000px;
-  /* left: -100px; */
-  /* right: 0; */
   margin-bottom: 100px;
   padding: 0;
-  /* z-index: 100; */
   border: 0;
   border-style: solid;
   background: #f2f2f2;
   border: 2rem solid white;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
   transition: 0.5s;
   transition-delay: 0.3s;
   border-radius: 50%;
@@ -88,11 +76,6 @@ span {
   width: 120px;
   height: 61px;
   margin-left: 30px;
-}
-.navv {
-  /* margin-right: 30px;
-    text-align: right; */
-  /* z-index:100; */
 }
 .navU {
   list-style: none;
@@ -138,15 +121,10 @@ a {
   position: absolute;
   top: 0;
   right: 0px;
-  /* position: relative;
-    top: 30px;
-    right: 30px; */
 }
 #circleImg {
   position: relative;
   top: 0px;
-  /* left: 10px; */
-  /* right: 20px; */
   width: 200px;
   height: 200px !important;
   height: 300px;
@@ -159,13 +137,11 @@ a {
 .about {
   width: 100%;
   height: 500px;
-  /* padding-top: 20px; */
   padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  /* background: rgb(242, 242, 242); */
   position: relative;
 }
 .parallax {
@@ -199,64 +175,28 @@ a {
 #aboutImg {
   width: 450px;
   height: 450px;
-
-  border: 1em dashed rgb(242, 242, 242);
- border-radius: 50%;
-
   border-radius: 50%;
-  border: 0.5em solid white;
+  border: 0.5em solid #f2f2f2;
 }
 
-img {
-  /* width: 400px;
-  height: 400px; */
-  /* width: 400px;
-  height: 300px;
-  border: 1em dashed rgb(242, 242, 242); */
-  /* border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  border: 0.5em solid white; */
-}
 
-.recentlyPro {
-  margin-top: 30px;
-  /* padding-top: 20px; */
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center; */
-  position: relative;
-  width: 95%;
-  height: 800px;
-left: 0;
-}
+
 
 .grid-container {
-  /* display: grid;
-  grid-template-columns: auto auto;
-  background-color:  rgb(242, 242, 242); */
-  display: flex;
-  /* grid-template-columns: auto auto; */
-  background-color: rgb(242, 242, 242);
-  width: 1200px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
+
 .grid-item {
-  padding: 10px;
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
-
   text-align: center;
+  position: relative;
+  margin: 0 auto;
+  border: 0.5em solid rgb(242, 242, 242);
 }
-.viewMore {
-}
+.grid-item:hover .overlay {
+  opacity: 0.7;
 
-.showWork {
-  /* height: 80vh; */
 }
-
 #workPage {
   margin-top: 50px;
   margin-left: 50px;
@@ -277,12 +217,8 @@ left: 0;
 .grid {
   display: grid;
   grid-template-columns: auto;
-  /* width: 50%; */
-  /* The image used */
   background-image: url("/circle.png");
-  /* Set a specific height */
   min-height: 200px;
-  /* Create the parallax scrolling effect */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -290,10 +226,6 @@ left: 0;
   background-size: 20em;
 }
 .discImg {
-  /* width: 600px;
-    height: 500px;
-    margin: 15px 0px;
-    border-radius: 50%; */
   margin: 15px 0px;
   border-radius: 50%;
   width: 100%;
@@ -371,88 +303,37 @@ left: 0;
 
 .latestWorks {
   width: 100%;
-  height: 750px;
-  /* background-color: chocolate; */
-  /* margin: 0;
-  padding: 0; */
-  box-sizing: border-box;
-  position: relative;
-  position: relative;
-  width: 95%;
-  height: 800px;
-left: 0;
 }
+.imgLatest {
+  width: 400px;
+  height: 400px;
 
-.a {
-  margin-bottom: 30px;
-  width: 90%;
-  height: 45%;
+}
+.overlay {
   position: absolute;
   top: 0;
-  background-color: rgb(242, 242, 242);
-}
-.b {
-  /* margin-bottom: 30px; */
-  width: 90%;
-  height: 45%;
-  position: absolute;
-  bottom: 30px;
-  background-color: rgb(242, 242, 242);
-}
-.c {
-  /* margin-top: 30px; */
-  width: 90%;
-  height: 45%;
-  position: absolute;
-  top: 30px;
-  background-color: rgb(242, 242, 242);
-}
-.d {
-  margin-top: 30px;
-  width: 90%;
-  height: 45%;
-  position: absolute;
   bottom: 0;
-  background-color: rgb(242, 242, 242);
-}
-.t {
-  position: absolute;
-  z-index: 40;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #9ebfd9;
 }
 
-  .t1 {
-    width: 40%;
-    position: absolute;
- left:0;
-    top: 20%;
-    z-index: 40;
 
-}
-.abcd{
-  width: 60%;
-  height: 100%;
-  /* background-color: rgb(90, 90, 90); */
+
+.text {
+  /* color: white; */
+  font-size: 20px;
   position: absolute;
-  right: 0;
-  top: 0;
-}
-.ab2 {
-  width: 45%;
-  height: 100%;
-  /* background-color: rgb(160, 121, 95); */
-  position: absolute;
-  right: 0;
-  margin-left: 10px;
-}
-.cd3 {
-  width: 45%;
-  height: 100%;
-  /* background-color: rgb(53, 22, 22); */
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 /* Footer */
 .footer {
@@ -465,10 +346,4 @@ left: 0;
   margin-top: 30px;
 }
 
-.footer p {
-  color: white;
-}
 
-#show {
-  /*  */
-}

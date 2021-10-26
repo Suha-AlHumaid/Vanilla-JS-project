@@ -29,7 +29,7 @@ const works = [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   },
   {
-    client: "website0",
+    client: "website1",
     tech: `JS`,
     created: "2020",
     imgUrl: `/img1.jpg`,
@@ -38,7 +38,7 @@ const works = [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   },
   {
-    client: "website0",
+    client: "website2",
     tech: `JS`,
     created: "2020",
     imgUrl: `/img1.jpg`,
@@ -47,7 +47,7 @@ const works = [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   },
   {
-    client: "website0",
+    client: "website3",
     tech: `JS`,
     created: "2020",
     imgUrl: `/img1.jpg`,
@@ -56,7 +56,7 @@ const works = [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   },
   {
-    client: "website0",
+    client: "website4",
     tech: `JS`,
     created: "2020",
     imgUrl: `/img1.jpg`,
@@ -98,7 +98,7 @@ const randerWork = (index) => {
     </div>
     <div class="dImg">
     <img src="${works[index].imgUrl2}" alt="image" class="singlePageImg">
-    s</div>
+    </div>
 </div>`);
   //end of forEach
 };
@@ -116,21 +116,23 @@ const worksRander = () => {
     //end of loop
   });
 };
-//   $("#portfolio").click(worksRander);
+
 
 //rander recent 4 work in home
 const randerWorks = () => {
-  // works.forEach((elem, index) => {
-  for (let index = 0; index < 4; index++) {
-    // $("#cards").append(
-    //   //  `<h1>hi</h1>`
-    //   `<div class="grid-item" id="card${index}"><img src="${works[index].imgUrl}"" alt="" id="imgCard${index}"/></div>`
-    // );
-    $(`#card${index}`).click(() => randerWork(index));
 
+  for (let index = 0; index < 3; index++) {
+    $("#cards").append(
+      `<div id="card${index}" class="grid-item"><img class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
+      <div class="overlay">
+      <div class="text">${works[index].client}</div>
+    </div>
+      </div>`
+    );
+    $(`#card${index}`).click(() => randerWork(index));
     //end of loop
-    // });
-  }
+
+  };
 };
 
 //rander of Portfolio page
