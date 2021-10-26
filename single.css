@@ -1,56 +1,71 @@
 .z {
-  width: 80%;
-  height: 800px;
-  background-color: rgb(170, 169, 169);
+  width: 1200px;
+  height: 1200px;
+  /* background-color: rgb(170, 169, 169); */
   position: relative;
+  right: 0;
+  margin-left: 100px;
   
 }
 .a {
 
-  width: 811px;
-  height: 756px;
-  color: #ffffff;
-  background-color: #4640b0;
+  width: 800px;
+  height: 800px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 64, 176);
   position: absolute;
   z-index: 10;
-  left: 0;
+  right: 0px;
+  bottom: 10%;
 }
 
 .b {
-  width: 811px;
-  height: 756px;
+  width: 800px;
+  height: 800px;
   background-image: none;
-  color: #ffffff;
-  background-color: #cdaaf7;
+  color: rgb(255, 255, 255);
+  background-color: rgb(205, 170, 247);
   position: absolute;
   z-index: 20;
-  bottom:0;
-  right: 0;
+  left: 0;
+  bottom: 12%;
 }
 .c {
-  color: #111111;
+  color: rgb(17, 17, 17);
   text-align: left;
   position: absolute;
-  flex: 1;
+  flex: 1 1 0%;
   width: 811px;
   height: 756px;
-  padding: 30px 0;
+  padding: 30px 0px;
   z-index: 30;
-  background-color: #bcd7ff;
+  background-color: white;
+  top: 0px;
+  right: 10%;
 
-top: 0;
-margin-left: 130px;
+}
+.t {
+  padding: 40px;
 }
 .d {
-  width: 811px;
-  height: 756px;
- 
-  box-shadow: 0 0 25px 0 rgb(0 0 0 / 30%);
-  background-color: wheat;
+  width: 800px;
+  height: 800px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 25px 0px;
+background-image: url(/glass-smartphone-high-tech-innovation-ai-technology_53876-129775.jpg);
+background-repeat: no-repeat;
+background-size: contain;
   z-index: 40;
   position: absolute;
- bottom: -400px;
- margin: auto;
- margin-left: 130px;
+  bottom: 0;
+  left: 10%;
 
+}
+h1 {
+  font-size: 4.5rem;
+  line-height: 1.2;
+  font-family: Ubuntu, sans-serif !important;
+}
+p {
+  font-size: 1.25rem;
+    font-style: italic;
 }
