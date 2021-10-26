@@ -19,15 +19,7 @@ $(document).ready(function () {
 
 //Informations
 const works = [
-  {
-    client: "website0",
-    tech: `JS`,
-    created: "2020",
-    imgUrl: `/img1.jpg`,
-    imgUrl2: `/img1.jpg`,
-    imgUrl3: `/img1.jpg`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-  },
+
   {
     client: "website1",
     tech: `JS`,
@@ -64,28 +56,30 @@ const works = [
     imgUrl3: `/img1.jpg`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   },
+  {
+    client: "website5",
+    tech: `JS`,
+    created: "2020",
+    imgUrl: `/img1.jpg`,
+    imgUrl2: `/img1.jpg`,
+    imgUrl3: `/img1.jpg`,
+    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+  },
+  {
+    client: "website6",
+    tech: `JS`,
+    created: "2020",
+    imgUrl: `/img1.jpg`,
+    imgUrl2: `/img1.jpg`,
+    imgUrl3: `/img1.jpg`,
+    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+  }
 ];
 
 //rander of single page discription
 const randerWork = (index) => {
   $("#home").hide();
   $("#workPage").addClass("showWork");
-  // $('#workPage').append(
-  //     `    <div class="disc">
-  //     <div class="discContent">
-  //     <h3>Client: <span>${works[index].client}</span></h3>
-  //     <h3>Created: <span>${works[index].created}</span></h3>
-  //     <h3>Teachnologies: <span>${works[index].tech}</span></h3>
-  //     <a href="" ><span style="color: red;"class="fa fa-heart" aria-hidden="true">
-  //     </span></a>
-  //     </div>
-  //     <div class="grid" >
-  //     <img class="discImg" src="${works[index].imgUrl}" alt="">
-  //     <img class="discImg" src="${works[index].imgUrl2}" alt="">
-  //     <img class="discImg" src="${works[index].imgUrl3}" alt="">
-  //     </div>
-
-  // </div>`
   $("#workPage").append(`
 
 <div class="discContainer">
@@ -121,9 +115,9 @@ const worksRander = () => {
 //rander recent 4 work in home
 const randerWorks = () => {
 
-  for (let index = 0; index < 3; index++) {
+  for (let index = 0; index < 4; index++) {
     $("#cards").append(
-      `<div id="card${index}" class="grid-item"><img class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
+      `<div id="card${index}" class="grid-item"><img style="width:${100*(index+3)}px;height:${100*(index+3)}px;"class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
       <div class="overlay">
       <div class="text">${works[index].client}</div>
     </div>
