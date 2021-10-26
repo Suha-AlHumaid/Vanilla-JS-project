@@ -4,8 +4,7 @@
   /* width: 100%; */
   /* color: #6a727f; */
   color: #111111;
-  font-family: raleway,sans-serif;
-
+  font-family: raleway, sans-serif;
 }
 .container {
   width: 100%;
@@ -16,73 +15,73 @@
   flex-direction: column;
   justify-content: space-between;
   color: #111111;
-
-  
+  /* background-color: rgb(242, 242, 242); */
+  /* position: absolute; */
 }
 .home {
-    margin: 70px auto;
-}
-h1{
- 
-    font-size: 5rem;
-    
-}
-p{
-    /* padding-top: 20px;
-    font-size: 1rem; */
-    font-weight: 400;
-    font-size: 1.125rem;
-    margin: 20px 0 0;
+  margin: 70px auto;
 }
 
-h2, h3,span{
-    color: #704da8;
-    text-shadow: 2px -10px 2px rgba(101,168,0,0);
-    font-size: 3.75rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    /* margin: 0 auto 0 0; */
+h1 {
+  font-size: 5rem;
+}
+p {
+  /* padding-top: 20px;
+    font-size: 1rem; */
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 20px 0 0;
+}
+
+h2,
+h3,
+span {
+  color: #704da8;
+  text-shadow: 2px -10px 2px rgba(101, 168, 0, 0);
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  /* margin: 0 auto 0 0; */
 }
 /* Header */
 .header {
-   
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    border: 0;
-    margin-right: 25px;
-    transition: 0.5s;
-    transition-delay: 0.3s;
-
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  border: 0;
+  margin-right: 25px;
+  transition: 0.5s;
+  transition-delay: 0.3s;
+  /* background: #f2f2f2; */
 }
 .circleBG {
-     z-index: 0;
-    width: 1200px;
-    height: 1200px;
-    position: absolute;
-    top: -1000px;
-    /* left: -100px; */
-    /* right: 0; */
-    margin-bottom: 100px;
-    padding: 0;
-    /* z-index: 100; */
-    border: 0;
-    border-style: solid;
-    background: #f2f2f2;
-    border: 2rem solid white;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
-    transition: 0.5s;
-    transition-delay: 0.3s;
-    border-radius: 50%;
+  z-index: 0;
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  top: -1000px;
+  /* left: -100px; */
+  /* right: 0; */
+  margin-bottom: 100px;
+  padding: 0;
+  /* z-index: 100; */
+  border: 0;
+  border-style: solid;
+  background: #f2f2f2;
+  border: 2rem solid white;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  transition: 0.5s;
+  transition-delay: 0.3s;
+  border-radius: 50%;
 }
 
 .logoImg {
@@ -90,10 +89,10 @@ h2, h3,span{
   height: 61px;
   margin-left: 30px;
 }
-.navv{
-    /* margin-right: 30px;
+.navv {
+  /* margin-right: 30px;
     text-align: right; */
-    /* z-index:100; */
+  /* z-index:100; */
 }
 .navU {
   list-style: none;
@@ -106,135 +105,135 @@ h2, h3,span{
 }
 a {
   text-decoration: none;
-
 }
 /* Banner */
 .banner {
-    position: relative;
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-around;
-    align-content: flex-end;
-    margin-top: 15px;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  align-content: flex-end;
+  margin-top: 15px;
 }
 #contentBanner {
-    width: 35vw;
-  margin-bottom:100px ;
+  width: 35vw;
+  margin-bottom: 100px;
   margin-left: 20px;
-
 }
 #imgBannerDiv {
-    width: 350px;
-    width: 55vw;
-    margin-top: 200px;
-    position: relative;
-    
-
+  width: 350px;
+  width: 55vw;
+  margin-top: 200px;
+  position: relative;
 }
-.imgBanner{
-    width: 100%;
-    height: 100vh;
-    border-radius: 50%;
-    border: 2rem solid white;
-    position: absolute;
-    top:0;
-    right: 0px;
-    /* position: relative;
+.imgBanner {
+  width: 100%;
+  height: 100vh;
+  border-radius: 50%;
+  border: 2rem solid white;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  /* position: relative;
     top: 30px;
     right: 30px; */
-    
-
 }
-#circleImg{
-    position: relative;
-    top: 0px;
-    /* left: 10px; */
-    /* right: 20px; */
-    width: 200px;
-    height: 200px !important;
-    height: 300px;
-    float: right;
-    border-radius: 50%;
-    border: 0.5em solid white;
+#circleImg {
+  position: relative;
+  top: 0px;
+  /* left: 10px; */
+  /* right: 20px; */
+  width: 200px;
+  height: 200px !important;
+  height: 300px;
+  float: right;
+  border-radius: 50%;
+  border: 0.5em solid white;
 }
-
 
 /* Main */
 .about {
-    width: 100%;
-    height: 500px;
-    /* padding-top: 20px; */
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /* background: rgb(242, 242, 242); */
-    position: relative;
+  width: 100%;
+  height: 500px;
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* background: rgb(242, 242, 242); */
+  position: relative;
 }
 .parallax {
-    /* The image used */
-    /* background-image: url("dots2.png"); */
-    /* Set a specific height */
-    /* min-height: 200px;  */
-    /* Create the parallax scrolling effect */
-    /* background-repeat: no-repeat;
+  /* The image used */
+  /* background-image: url("dots2.png"); */
+  /* Set a specific height */
+  /* min-height: 200px;  */
+  /* Create the parallax scrolling effect */
+  /* background-repeat: no-repeat;
     background-attachment: fixed;
     background-position:right;
     background-size:20em; */
-    /* background-image: url(dots2.png);
+  /* background-image: url(dots2.png);
     background-repeat: repeat-x;
     background-attachment: fixed;
     background-position: left;
     background-size: 20rem; */
-  
-  }
-
+}
 
 .aboutContent {
   width: 40vw;
   padding: 30px 40px;
   background-color: rgb(242, 242, 242);
   text-align: left;
-
 }
-.aboutImg{
-    width: 40vw;
-    margin:0 30px;
-    /* border-radius: 50%; */
+.aboutImg {
+  width: 40vw;
+  margin: 0 30px;
+  /* border-radius: 50%; */
 }
 #aboutImg {
-    width: 450px;
-    height: 450px;
-}
+  width: 450px;
+  height: 450px;
 
-img {
-  width: 400px;
-  height: 400px;
-  /* width: 400px;
-  height: 300px;
-  border: 1em dashed rgb(242, 242, 242); */
-  border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  border: 1em dashed rgb(242, 242, 242);
+ border-radius: 50%;
+
   border-radius: 50%;
   border: 0.5em solid white;
 }
 
-.recentlyPro {
-    margin-top: 30px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+img {
+  /* width: 400px;
+  height: 400px; */
+  /* width: 400px;
+  height: 300px;
+  border: 1em dashed rgb(242, 242, 242); */
+  /* border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 0.5em solid white; */
 }
-  
+
+.recentlyPro {
+  margin-top: 30px;
+  /* padding-top: 20px; */
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; */
+  position: relative;
+  width: 95%;
+  height: 800px;
+left: 0;
+}
+
 .grid-container {
   /* display: grid;
   grid-template-columns: auto auto;
@@ -246,79 +245,230 @@ img {
   flex-wrap: wrap;
 }
 .grid-item {
-  padding:10px;
+  padding: 10px;
   /* border: 1px solid rgba(0, 0, 0, 0.8); */
 
   text-align: center;
-  
 }
 .viewMore {
 }
 
 .showWork {
-    /* height: 80vh; */
-  }
-  
-  #workPage{
-    margin-top: 50px;
-    margin-left: 50px;
+  /* height: 80vh; */
 }
-.disc{
+
+#workPage {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.disc {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
 }
 .discContent {
-    width: 40%;
-    position: sticky;
-    top: 30%;
-    left: 0px;
-    padding-top: 50px;
+  width: 40%;
+  position: sticky;
+  top: 30%;
+  left: 0px;
+  padding-top: 50px;
 }
 .grid {
-    display: grid;
-    grid-template-columns: auto;
-    /* width: 50%; */
-            /* The image used */
-            background-image: url("/circle.png");
-            /* Set a specific height */
-            min-height: 200px; 
-            /* Create the parallax scrolling effect */
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size:cover;
-            background-position:right;
-            background-size:20em;
-          
+  display: grid;
+  grid-template-columns: auto;
+  /* width: 50%; */
+  /* The image used */
+  background-image: url("/circle.png");
+  /* Set a specific height */
+  min-height: 200px;
+  /* Create the parallax scrolling effect */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+  background-size: 20em;
 }
 .discImg {
-    /* width: 600px;
+  /* width: 600px;
     height: 500px;
     margin: 15px 0px;
     border-radius: 50%; */
-    margin: 15px 0px;
-    border-radius: 50%;
-    width: 100%;
-    height: 100vh;
-
+  margin: 15px 0px;
+  border-radius: 50%;
+  width: 100%;
+  height: 100vh;
 }
 
-/* Footer */
-.footer{
 
+
+/* single page discription */
+.discContainer {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  position: relative;
+  right: 0;
+  margin-left: 90px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.blue {
+  width: 800px;
+  height: 800px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 64, 176);
+  position: absolute;
+  z-index: 10;
+  right: 0px;
+  bottom: 10%;
+}
+
+.purple {
+  width: 800px;
+  height: 800px;
+  background-image: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(205, 170, 247);
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  bottom: 12%;
+}
+.white {
+  color: rgb(17, 17, 17);
+  text-align: left;
+  position: absolute;
+  flex: 1 1 0%;
+  width: 811px;
+  height: 756px;
+  padding: 30px 0px;
+  z-index: 30;
+  background-color: white;
+  top: 0px;
+  right: 10%;
+}
+.t {
+  padding: 40px;
+}
+.dImg {
+  width: 800px;
+  height: 800px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 25px 0px;
+  background-color: rgb(193 220 243);
+  z-index: 40;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  border: none;
+}
+
+.singlePageImg {
+  object-fit: fill;
+  width: 800px;
+  height: 800px;
+}
+
+.latestWorks {
+  width: 100%;
+  height: 750px;
+  /* background-color: chocolate; */
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  position: relative;
+  position: relative;
+  width: 95%;
+  height: 800px;
+left: 0;
+}
+
+.a {
+  margin-bottom: 30px;
+  width: 90%;
+  height: 45%;
+  position: absolute;
+  top: 0;
+  background-color: rgb(242, 242, 242);
+}
+.b {
+  /* margin-bottom: 30px; */
+  width: 90%;
+  height: 45%;
+  position: absolute;
+  bottom: 30px;
+  background-color: rgb(242, 242, 242);
+}
+.c {
+  /* margin-top: 30px; */
+  width: 90%;
+  height: 45%;
+  position: absolute;
+  top: 30px;
+  background-color: rgb(242, 242, 242);
+}
+.d {
+  margin-top: 30px;
+  width: 90%;
+  height: 45%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(242, 242, 242);
+}
+.t {
+  position: absolute;
+  z-index: 40;
+}
+
+  .t1 {
+    width: 40%;
+    position: absolute;
+ left:0;
+    top: 20%;
+    z-index: 40;
+
+}
+.abcd{
+  width: 60%;
+  height: 100%;
+  /* background-color: rgb(90, 90, 90); */
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ab2 {
+  width: 45%;
+  height: 100%;
+  /* background-color: rgb(160, 121, 95); */
+  position: absolute;
+  right: 0;
+  margin-left: 10px;
+}
+.cd3 {
+  width: 45%;
+  height: 100%;
+  /* background-color: rgb(53, 22, 22); */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+/* Footer */
+.footer {
   width: 100%;
   height: 80px;
   text-align: center;
-  background-color: #333333;
-
-
+  background-color: rgb(242, 242, 242);
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
 }
 
-.footer p{
-    color: white;
+.footer p {
+  color: white;
 }
 
 #show {
-    margin-top: 200px;
+  /*  */
 }
