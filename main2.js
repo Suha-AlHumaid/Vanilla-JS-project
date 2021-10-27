@@ -4,18 +4,18 @@ const portfoliWorks = JSON.parse(localStorage.getItem("portfolio"));
 function favFunc(index) {
 
   portfoliWorks[index].fav = !portfoliWorks[index].fav;
-console.log(portfoliWorks[index].fav, portfoliWorks[index].client);
+  // console.log(portfoliWorks[index].fav, portfoliWorks[index].client);
 
   // localStorage.setItem("portfolio", JSON.stringify(portfoliWorks));
-  // randerPortfolio();
+  randerPortfolio();
 };
 
 
-
-const randerWork= (elem) =>{
-    console.log(elem.client);
-    $("#home").hide();
-    $('#discPage').append(
+//discription
+const randerWork = (elem) => {
+  console.log(elem.client);
+  $("#home").hide();
+  $('#discPage').append(
     `<div class="discContainer">
 <div class="blue "></div>
 <div class="purple"></div>
@@ -27,79 +27,79 @@ const randerWork= (elem) =>{
     </div>
     <div class="dImg"> <img src="${elem.imgUrl2}" alt="image" class="singlePageImg"></div>
 </div>`
-      );
-    
-    
-    };
+  );
 
-    //main rander
-const randerPortfolio = ()=> {
-portfoliWorks.forEach((elem,i)=>{
+};//end discription
+
+/////////////////main rander
+const randerPortfolio = () => {
+  //cards 
+  $('#show').html("");
+  portfoliWorks.forEach((elem, i) => {
+    
     $('#show').append(`
     <div class="grid-item" id="portfoliWorks${i}" >
        <img class="portImg" id="work${i}" src="${elem.imgUrl}" alt="">
   
   ${elem.client}
-   <i><a id="like${i}" class="myClass heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a></i>
-    </div> `);
-   
-
-    //search
-    $("#searchBtn").click(function(){
-    const name1 = $("#searchInput").val();
-    if (name1.length && name1.trim().length) {
-     const name= name1.toLowerCase();
-     const nameProject =elem.client.toLowerCase();
-     console.log( nameProject.includes(name),elem);
-     const obj = portfoliWorks.find(o => ((o.client.toLowerCase()) === name)|| (o.client.toLowerCase().includes(name)));
-     $('#show').html(``);
-   if (obj){
-   
-    $('#show').append(`
-    <div class="grid-item" id="portfoliWorks${i}" >
-    <div  >
-       <img id="obj${i}" class="portImg" src="${obj.imgUrl}" alt="">
-    </div>
-    <div>${obj.client}</div>
-    <div class="favorite" id="like${i}" ></div>
-    </div> `);
-    $(`#obj${i}`).click(()=>randerWork(obj));
-   } else {
-    $('#show').append(`
-  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
-   }
-   
-    };
-    });
-    //end of search
-    if (portfoliWorks[i].fav === false) {
-      $(`#like${i}`).removeClass("myClass");
+   <a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a>
+    </div> `);//end cards
+    $(`#like${i}`).click(() => favFunc(i));
+    if (elem.fav === false) {
+      $(`#like${i}`).removeClass("heart");
+    }else {
+      $(`#like${i}`).addClass("heart");
     }
     
-$(`#work${i}`).click(()=>randerWork(elem));
-    $(`#like${i}`).click(() => favFunc(i));
     
-    //loop end
+    //search
+    $("#searchBtn").click(function () {
+      const name1 = $("#searchInput").val();
+      if (name1.length && name1.trim().length) {
+        const name = name1.toLowerCase();
+        const nameProject = elem.client.toLowerCase();
+        console.log(nameProject.includes(name), elem);
+        const arr = portfoliWorks.filter(o => ((o.client.toLowerCase()) === name) || (o.client.toLowerCase().includes(name)));
+        $('#show').html(``);
+        if (arr.length) {
 
-  });
-
-};
-function search1Func() {
-  const name1 = $("#searchInput").val();
-  if (name1.length && name1.trim().length) {
-   const name= name1.toLowerCase();
+          arr.forEach((e, index) => {
+            $('#show').append(`<div class="grid-item" id="portfoliWorks${index}" ><div>
+       <img id="obj${i}" class="portImg" src="${e.imgUrl}" alt=""></div>
+    <div>${e.client}</div>
+    <div class="favorite" id="like${i}" ></div>
+    </div> `);
+            $(`#obj${index}`).click(() => randerWork(e));
+          }
   
-   let obj = portfoliWorks.find(o => o.client === name1);
- if (obj){
-  
- }
+          );
+          $('#show').append(`<p><a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p>`) 
+        }
+          else {
+            $('#show').append(`
+  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
+          }
 
+           
+         
   }
+});//end of search
 
-}
+  
+
+  
+   
 
 
-// portfoliWorks[i].client
+$(`#work${i}`).click(() => randerWork(elem));
+
+
+    
+
+  });//loop end
+
+};//main rander
+
 randerPortfolio();
 
 // const randerHome = () => {
@@ -107,32 +107,4 @@ randerPortfolio();
 //     localStorage.setItem("portfolio", JSON.stringify(portfoliWorks));
 //     location.replace("index.html");
 //   });
-  // $("#homeLink").click(randerHome);
-
-    const searchFunc=(elem,i)=>{
-    const name1 = $("#searchInput").val();
-    if (name1.length && name1.trim().length) {
-     const name= name1.toLowerCase();
-     const nameProject =elem.client.toLowerCase();
-     console.log( nameProject.includes(name),elem);
-     const obj = portfoliWorks.find(o => ((o.client.toLowerCase()) === name)|| (o.client.toLowerCase().includes(name)));
-     $('#show').html(``);
-   if (obj){
-   
-    $('#show').append(`
-    <div class="grid-item" id="portfoliWorks${i}" >
-    <div  >
-       <img id="obj${i}" class="portImg" src="${obj.imgUrl}" alt="">
-    </div>
-    <div>${obj.client}</div>
-    <div class="favorite" id="like${i}" ></div>
-    </div> `);
-    $(`#obj${i}`).click(()=>randerWork(obj));
-   } else {
-    $('#show').append(`
-  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
-   }
-   
-    };
-  }
-  
+// $("#homeLink").click(randerHome);

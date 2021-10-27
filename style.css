@@ -380,7 +380,7 @@ a {
   height: 300px;
   text-align: center;
   color: #ffffff;
-  background-color: #333333;
+  background-color: #6f6f6f;
   position: relative;
   bottom: 0;
   margin-top: 30px;
@@ -449,21 +449,14 @@ left: 0;
 {
 background-color: #f2f2f2;
 }
-/* .heart{
+.heart{
   animation: heart 0.5s linear ;
   color: #8834ec;
  
 
-}; */
-.portfoliWorks {
-  background-color: yellow;
-}
-.portfoliWorks:visited{
-  opacity: 0.3;
-}
+};
 
-
-/* @keyframes heart {
+@keyframes heart {
   0%{
     transform: rotate(0deg) scale(1.7);
   }
@@ -476,12 +469,5 @@ background-color: #f2f2f2;
   100%{
     transform: rotate(0deg) scale(1);
   }
-} */
-.myClass {
-  color: #CCC;
-  animation: heart 0.5s linear ;
-  /* color: #8834ec */
 }
-.fa {
-  color: #8834ec 
-}
+
