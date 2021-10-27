@@ -15,6 +15,10 @@ $(document).ready(function () {
     marginTop: "300px",
     transitionDuration: "2s",
   });
+  $(".like").click({
+   
+$this.toggleClass("heart");
+  });
 });
 
 //Informations
