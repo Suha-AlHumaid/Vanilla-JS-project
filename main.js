@@ -32,14 +32,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
   fav: false,
   },
-  {
-    client: "Bahar app",
-    tech: `JS , PHP , Magento,Bootstrap`,
-    created: "Feb 3, 2021",
-    imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
-    imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-    fav: false,},
+
   {
     client: "Xtep Stor",
     tech: `PHP, Magento, Bootstrap, JS`,
@@ -58,6 +51,15 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
     fav: false,
   },
+  {
+    client: "Bahar app",
+    tech: `JS , PHP , Magento,Bootstrap`,
+    created: "Feb 3, 2021",
+    imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
+    imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
+    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    fav: false,},
+
   {
     client: "Saaf",
     tech: `PHP, Magento, Bootstrap, JS`,
