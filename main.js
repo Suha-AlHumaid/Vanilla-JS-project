@@ -29,10 +29,10 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-  fav: false,
+  fav: true,
   },
   {
-    client: "Bahar",
+    client: "Bahar app",
     tech: `JS , PHP , Magento,Bootstrap`,
     created: "Feb 3, 2021",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
@@ -40,13 +40,13 @@ const works = [
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
     fav: false,},
   {
-    client: "Xtep Srore",
+    client: "Xtep Sror",
     tech: `PHP, Magento, Bootstrap, JS`,
     created: "March 3, 2021",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-    fav: false,
+    fav: true,
   },
   {
     client: "Swiss Corner",

@@ -2,20 +2,18 @@
 const portfoliWorks = JSON.parse(localStorage.getItem("portfolio"));
 
 function favFunc(index) {
-
+ 
+  console.log(portfoliWorks[index].fav);
   portfoliWorks[index].fav = !portfoliWorks[index].fav;
-console.log(portfoliWorks[index].fav, portfoliWorks[index].client);
-
-  // localStorage.setItem("portfolio", JSON.stringify(portfoliWorks));
-  // randerPortfolio();
+  console.log(portfoliWorks[index].fav);
+  // randerPortfolio ();
 };
-
-
 
 const randerWork= (elem) =>{
     console.log(elem.client);
     $("#home").hide();
     $('#discPage').append(
+  
     `<div class="discContainer">
 <div class="blue "></div>
 <div class="purple"></div>
@@ -32,26 +30,36 @@ const randerWork= (elem) =>{
     
     };
 
-    //main rander
+
 const randerPortfolio = ()=> {
 portfoliWorks.forEach((elem,i)=>{
     $('#show').append(`
     <div class="grid-item" id="portfoliWorks${i}" >
-       <img class="portImg" id="work${i}" src="${elem.imgUrl}" alt="">
-  
-  ${elem.client}
-   <i><a id="like${i}" class="myClass heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a></i>
+    <div id="work${i}" >
+       <img class="portImg" src="${portfoliWorks[i].imgUrl}" alt="">
+    </div>
+    <div>${portfoliWorks[i].client}</div>
+    <div class="favorite" id="like${i}" ></div>
     </div> `);
+    // $(`#like${i}`).click(()=>favFunc(i));
    
-
-    //search
+    if(portfoliWorks[i].fav === false) {
+      // $(`#like${i}`).addClass("fa fa-heart-o");
+      $(`#like${i}`).append(`
+      <i><a id="like${i}" class="fa fa-heart-o"  aria-hidden="true" style=" padding-left: 5px;" href=""></a></i>`);
+    } 
+    else{
+      $(`#like${i}`).append(`
+      <i><a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;" href=""></a></i>`);
+      // $(`#like${i}`).addClass("heart fa fa-heart");
+      // $(`#like${i}`).removeClass("fa fa-heart-o");
+    }
     $("#searchBtn").click(function(){
     const name1 = $("#searchInput").val();
     if (name1.length && name1.trim().length) {
      const name= name1.toLowerCase();
      const nameProject =elem.client.toLowerCase();
-     console.log( nameProject.includes(name),elem);
-     const obj = portfoliWorks.find(o => ((o.client.toLowerCase()) === name)|| (o.client.toLowerCase().includes(name)));
+     const obj = portfoliWorks.find(o => (o.client.toLowerCase()) === name1);
      $('#show').html(``);
    if (obj){
    
@@ -66,18 +74,14 @@ portfoliWorks.forEach((elem,i)=>{
     $(`#obj${i}`).click(()=>randerWork(obj));
    } else {
     $('#show').append(`
-  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
+  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back</a></p> `);
    }
    
     };
     });
-    //end of search
-    if (portfoliWorks[i].fav === false) {
-      $(`#like${i}`).removeClass("myClass");
-    }
-    
+  
 $(`#work${i}`).click(()=>randerWork(elem));
-    $(`#like${i}`).click(() => favFunc(i));
+    $(`#like${i}`).on("click", () => favFunc(i));
     
     //loop end
 
@@ -99,6 +103,7 @@ function search1Func() {
 }
 
 
+
 // portfoliWorks[i].client
 randerPortfolio();
 
@@ -108,31 +113,3 @@ randerPortfolio();
 //     location.replace("index.html");
 //   });
   // $("#homeLink").click(randerHome);
-
-    const searchFunc=(elem,i)=>{
-    const name1 = $("#searchInput").val();
-    if (name1.length && name1.trim().length) {
-     const name= name1.toLowerCase();
-     const nameProject =elem.client.toLowerCase();
-     console.log( nameProject.includes(name),elem);
-     const obj = portfoliWorks.find(o => ((o.client.toLowerCase()) === name)|| (o.client.toLowerCase().includes(name)));
-     $('#show').html(``);
-   if (obj){
-   
-    $('#show').append(`
-    <div class="grid-item" id="portfoliWorks${i}" >
-    <div  >
-       <img id="obj${i}" class="portImg" src="${obj.imgUrl}" alt="">
-    </div>
-    <div>${obj.client}</div>
-    <div class="favorite" id="like${i}" ></div>
-    </div> `);
-    $(`#obj${i}`).click(()=>randerWork(obj));
-   } else {
-    $('#show').append(`
-  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
-   }
-   
-    };
-  }
-  

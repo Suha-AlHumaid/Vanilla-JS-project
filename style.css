@@ -67,7 +67,7 @@ span {
 }
 .circleBG {
   z-index: 0;
-  width: 1500px;
+  width: 100%;
   height: 1200px;
   position: absolute;
   top: -1000px;
@@ -449,12 +449,12 @@ left: 0;
 {
 background-color: #f2f2f2;
 }
-.heart{
+/* .heart{
   animation: heart 0.5s linear ;
   color: #8834ec;
-  /* color: #8834ec; */
+ 
 
-};
+}; */
 .portfoliWorks {
   background-color: yellow;
 }
@@ -462,7 +462,8 @@ background-color: #f2f2f2;
   opacity: 0.3;
 }
 
-@keyframes heart {
+
+/* @keyframes heart {
   0%{
     transform: rotate(0deg) scale(1.7);
   }
@@ -475,4 +476,12 @@ background-color: #f2f2f2;
   100%{
     transform: rotate(0deg) scale(1);
   }
+} */
+.myClass {
+  color: #CCC;
+  animation: heart 0.5s linear ;
+  /* color: #8834ec */
+}
+.fa {
+  color: #8834ec 
 }
