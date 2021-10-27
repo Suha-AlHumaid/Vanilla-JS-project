@@ -75,7 +75,7 @@ portfoliWorks.forEach((elem,i)=>{
     $(`#obj${i}`).click(()=>randerWork(obj));
    } else {
     $('#show').append(`
-  <p>Soory,no result.</p> `);
+  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back</a></p> `);
    }
    
     };
