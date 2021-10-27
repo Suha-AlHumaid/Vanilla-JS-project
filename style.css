@@ -193,7 +193,12 @@ a {
 }
 
 
+#show{
+  margin-top: 200px;
+  margin-bottom: 30px;
 
+
+}
 
 .grid-container {
   display: grid;

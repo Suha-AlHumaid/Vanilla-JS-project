@@ -20,7 +20,8 @@ $(document).ready(function () {
 });
 
 //Informations
-const works = [
+
+const works = JSON.parse(localStorage.getItem("works")) || [
 
   {
     client: "Jamaeat App",
@@ -76,25 +77,28 @@ const works = [
     fav: false,
   }
 ];
+localStorage.setItem("works", JSON.stringify(works));
 
 //rander of single page discription
 const randerWork = (index) => {
   $("#home").hide();
   $("#workPage").addClass("showWork");
-  $("#workPage").append(`
+  $("#workPage").append(
 
-<div class="discContainer">
+`<div class="discContainer">
 <div class="blue "></div>
 <div class="purple"></div>
 <div class="white">
     <div class="t">
     <h1>${works[index].client}</h1>
-    <p>${works[index].disc}</p></div>
+    <p>${works[index].disc}</p>
     </div>
-    <div class="dImg">
-    <img src="${works[index].imgUrl2}" alt="image" class="singlePageImg">
     </div>
-</div>`);
+    <div class="dImg"> <img src="${works[index].imgUrl2}" alt="image" class="singlePageImg"></div>
+</div>`
+
+
+);
   //end of forEach
 };
 
@@ -131,13 +135,10 @@ const randerWorks = () => {
 //rander of Portfolio page
 const randerPortfolio = () => {
   works.forEach((elem, index) => {
-    localStorage.setItem("portfolio", JSON.stringify(works));
+    localStorage.setItem("works", JSON.stringify(works));
     location.replace("portfolio.html");
   });
   //end of loop
 };
 $("#portfolioLink").click(randerPortfolio);
-$(".like").click(() => {
-  $("like").removeClass("heart");
-})
 randerWorks();
