@@ -8,6 +8,7 @@ $(document).ready(function () {
     marginTop: "0px",
     transitionDuration: "2s",
   });
+
   $("#contentBanner").animate({
     // bottom: '250px',
     // height: '+=150px',
@@ -15,10 +16,7 @@ $(document).ready(function () {
     marginTop: "300px",
     transitionDuration: "2s",
   });
-  $(".like").click({
-   
-$this.toggleClass("heart");
-  });
+
 });
 
 //Informations
@@ -31,6 +29,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+  fav: false,
   },
   {
     client: "Bahar",
@@ -39,7 +38,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-  },
+    fav: false,},
   {
     client: "Xtep Srore",
     tech: `PHP, Magento, Bootstrap, JS`,
@@ -47,6 +46,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    fav: false,
   },
   {
     client: "Swiss Corner",
@@ -55,6 +55,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/3-8.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/3-8.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    fav: false,
   },
   {
     client: "Saaf",
@@ -63,6 +64,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/saaf11111.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/saaf11111.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    fav: false,
   },
   {
     client: "Marina Fashion",
@@ -71,6 +73,7 @@ const works = [
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/4-1.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/4-1.png`,
     disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    fav: false,
   }
 ];
 
@@ -116,9 +119,7 @@ const randerWorks = () => {
   for (let index = 0; index < 4; index++) {
     $("#cards").append(
       `<div id="card${index}" class="grid-item"><img style="width:${100*(index+3)}px;height:${100*(index+3)}px;"class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
-      <div class="overlay">
-      <div class="text">${works[index].client}</div>
-    </div>
+
       </div>`
     );
     $(`#card${index}`).click(() => randerWork(index));
@@ -136,5 +137,7 @@ const randerPortfolio = () => {
   //end of loop
 };
 $("#portfolioLink").click(randerPortfolio);
-
+$(".like").click(() => {
+  $("like").removeClass("heart");
+})
 randerWorks();
