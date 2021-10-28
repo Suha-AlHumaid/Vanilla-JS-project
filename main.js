@@ -25,12 +25,12 @@ const works = JSON.parse(localStorage.getItem("works")) || [
 
   {
     client: "Jamaeat App",
-    tech: `Laravel , React, Php`,
+    tech: `Swift`,
     created: "November 02, 2018",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/2-5.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
-  fav: true,
+    disc: `Accelerate Your Business With Response Mobile Applications Built Over Android, IOS, Swiftcode,Kotlin, React Native, Flutter And More.`,
+  fav: false,
   },
 
   {
@@ -39,25 +39,25 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     created: "March 3, 2021",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    disc: `We Deliver ECommerce That Are Completely Customizable So That They Can Evolve In The Near Future And Accommodate The Brand’s Vision`,
     fav: false,
   },
   {
     client: "Swiss Corner",
-    tech: `PHP, React, Bootstrap`,
+    tech: `SWift`,
     created: "Feb 5, 2020",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/3-8.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/3-8.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    disc: `Accelerate Your Business With Response Mobile Applications Built Over Android, IOS, Swiftcode,Kotlin, React Native, Flutter And More.`,
     fav: false,
   },
   {
-    client: "Bahar app",
+    client: "Bahar Profile",
     tech: `JS , PHP , Magento,Bootstrap`,
     created: "Feb 3, 2021",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/04/bahr3.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    disc: `Custom Web Application Development, Re-Engineering / Migration, Porting, Upgrades / Enhancement, Integration, Delivery And Support.`,
     fav: false,},
 
   {
@@ -66,7 +66,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     created: "March 3, 2020",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/saaf11111.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/saaf11111.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    disc: `We Deliver ECommerce That Are Completely Customizable So That They Can Evolve In The Near Future And Accommodate The Brand’s Vision`,
     fav: false,
   },
   {
@@ -75,7 +75,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     created: "2020",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/4-1.png`,
     imgUrl2: `https://ccit.sa/wp-content/uploads/2021/02/4-1.png`,
-    disc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa, itaque consequatur earum commodi aliquam accusantium tenetur inventore reiciendis alias! Dolores id iure mollitia nemo ad quae possimus expedita iste?`,
+    disc: `We Deliver ECommerce That Are Completely Customizable So That They Can Evolve In The Near Future And Accommodate The Brand’s Vision.`,
     fav: false,
   }
 ];
