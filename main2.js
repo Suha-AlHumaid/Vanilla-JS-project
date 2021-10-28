@@ -11,7 +11,8 @@ function favFunc(index) {
 
 //discription
 const randerWork = (elem,i) => {
-
+  console.log("hi");
+  $("#homePortfolio").hide();
   $("#home").hide();
   $('#discPage').append(
     `<div class="discContainer">
@@ -63,11 +64,12 @@ const randerPortfolio = () => {
 
           arr.forEach((e, index) => {
             $('#show').append(`<div class="grid-item" id="portfoliWorks${index}" ><div>
-       <img id="obj${i}" class="portImg" src="${e.imgUrl}" alt=""></div>
+       <img id="obj${index}" class="portImg" src="${e.imgUrl}" alt=""></div>
     <div>${e.client}</div>
-    <div class="favorite" id="like${i}" ></div>
+    <div class="favorite" id="like${index}" ></div>
     </div> `);
-            $(`#obj${index}`).click(() => randerWork(e,index));
+
+            $(`portfoliWorks${index}`).click(() => randerWork(e,index));
           }
   
           );
@@ -101,16 +103,18 @@ $(`#work${i}`).click(() => randerWork(elem,i));
 
 
 
+
+
+
+
 const randerfavforite = () => {
-
-  works.forEach((elem, index) => {
-    localStorage.setItem("portfolio", JSON.stringify(works));
-    location.replace("fsvorite.html");
-
-
-  });
-  //end of loop
-};
+  console.log(hi);
+    works.forEach((elem, index) => {
+      localStorage.setItem("works", JSON.stringify(works));
+      location.replace("favorite.html");
+  
+  
+    });
 $("#favNav").click(randerfavforite);
-
+};
 randerPortfolio();
