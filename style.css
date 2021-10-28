@@ -474,12 +474,17 @@ left: 0;
 {
 background-color: #f2f2f2;
 }
+
 .heart{
   animation: heart 0.5s linear ;
   color: #8834ec;
  
 
 };
+#pP{
+  color: #8834ec;
+  margin: 0px;
+}
 
 @keyframes heart {
   0%{

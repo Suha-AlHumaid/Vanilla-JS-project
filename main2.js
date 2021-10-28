@@ -21,7 +21,11 @@ const randerWork = (elem,i) => {
 <div class="white">
     <div class="t">
     <h1>${elem.client}</h1>
-    <p>${elem.disc}</p>
+    <p>${elem.disc}</p>    
+    <p>Technologies: ${elem.tech}</p>
+    <p> Created: ${elem.created}</p>
+    
+    
     </div>
     </div>
     <div class="dImg"> <img src="${elem.imgUrl2}" alt="image" class="singlePageImg"></div>

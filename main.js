@@ -94,6 +94,9 @@ const randerWork = (index) => {
     <div class="t">
     <h1>${works[index].client}</h1>
     <p>${works[index].disc}</p>
+    <p>Technologies: ${works[index].tech}</p>
+   
+    <p> Created: ${works[index].created}</p>
     </div>
     </div>
     <div class="dImg"> <img src="${works[index].imgUrl2}" alt="image" class="singlePageImg"></div>
