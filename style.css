@@ -212,7 +212,7 @@ a {
   position: relative;
   margin: 20px;
   /* cursor: grab; */
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .grid-item:hover .overlay {
@@ -352,7 +352,9 @@ a {
   transition: .5s ease;
   /* background-color: #9ebfd9; */
   border-radius: 50%;
+  
 }
+
 .t1{
   width: 100%;
   display: flex;
@@ -370,6 +372,8 @@ a {
 }
 .text {
   /* color: white; */
+  width: 200px;
+  height: 100px;
   font-size: 2rem;
   position: absolute;
   top: 50%;

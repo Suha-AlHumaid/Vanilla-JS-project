@@ -123,11 +123,17 @@ const worksRander = () => {
 const randerWorks = () => {
 
   for (let index = 0; index < 4; index++) {
-    $("#cards").append(
-      `<div id="card${index}" class="grid-item"><img style="width:${100*(index+3)}px;height:${100*(index+3)}px;"class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
+    // $("#cards").append(
+    //   `<div id="card${index}" class="grid-item"><img style="width:${100*(index+3)}px;height:${100*(index+3)}px;"class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
 
-      </div>`
-    );
+    //   </div>`
+    // );
+    $("#cards").append(`
+<div id="card${index}" class="grid-item">
+<img style="width:${100*(index+3)}px;height:${100*(index+3)}px;"class="imgLatest" src="${works[index].imgUrl}" alt="" id="imgCard${index}"/>
+<div class="overlay text">${works[index].client}</div>
+</div>`   );
+
     $(`#card${index}`).click(() => randerWork(index));
     //end of loop
 
