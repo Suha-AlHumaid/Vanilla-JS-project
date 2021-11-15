@@ -76,7 +76,7 @@ const randerPortfolio = () => {
             $(`#portfoliWorks${index}`).click(() => randerWork(e, index));
           });
           $("#show").append(
-            `<p><a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p>`
+            `<div><p><a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p></div>`
           );
         } else {
           $("#show").append(`
