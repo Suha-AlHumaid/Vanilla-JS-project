@@ -194,14 +194,19 @@ a {
   border: 0.5em solid #f2f2f2;
 }
 
-
+#showFav{
+  margin-top: 230px
+}
 #show{
   /* margin-top: 200px; */
   margin-bottom: 30px;
-
-
 }
-
+/* #showFav{
+  margin-top: 30px;
+} */
+#discPage{
+  margin-top: 50px;
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -500,4 +505,74 @@ background-color: #f2f2f2;
     transform: rotate(0deg) scale(1);
   }
 }
+@media screen and (max-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+}
+.grid-item{
+  margin: 0;
+}
+.search {
+  width: 80%;
+}
+.header {
+  flex-direction: column;
+}
+.banner{
+  flex-direction: column;
+}
 
+
+#contentBanner
+{
+  width: 100%;
+  margin-bottom: 100
+px
+;
+  margin-left: 53
+px
+;
+}
+element.style {
+  width: 300
+px
+;
+  height: 300
+px
+;
+}
+.imgLatest {
+  width: 200px;
+
+
+  height: 200px;
+
+}
+#imgCard0 ,#imgCard1 ,#imgCard2, #imgCard3 {
+height: 300px !important;
+width:300px !important;
+}
+#cards {
+  height: 1300px;
+  position: relative;
+}
+#card0{
+  position: relative;
+}
+#card1 {
+  position: relative;
+  /* top:32px; */
+}
+#card2 {
+  position: relative;
+  /* bottom: 32px; */
+  right: 0;
+}
+#card3 {
+  position: relative;
+left:0;
+}
+}

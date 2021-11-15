@@ -2,19 +2,17 @@
 const works = JSON.parse(localStorage.getItem("works"));
 
 function favFunc(index) {
-
   works[index].fav = !works[index].fav;
   localStorage.setItem("works", JSON.stringify(works));
   randerPortfolio();
-};
-
+}
 
 //discription
-const randerWork = (elem,i) => {
+const randerWork = (elem, i) => {
   console.log("hi");
   $("#homePortfolio").hide();
   $("#home").hide();
-  $('#discPage').append(
+  $("#discPage").append(
     `<div class="discContainer">
 <div class="blue "></div>
 <div class="purple"></div>
@@ -31,30 +29,28 @@ const randerWork = (elem,i) => {
     <div class="dImg"> <img src="${elem.imgUrl2}" alt="image" class="singlePageImg"></div>
 </div>`
   );
-};//end discription
+}; //end discription
 
 /////////////////main rander
 const randerPortfolio = () => {
-  //cards 
-  $('#show').html("");
+  //cards
+  $("#show").html("");
   works.forEach((elem, i) => {
-    
-    $('#show').append(`
+    $("#show").append(`
     <div class="grid-item" id="portfoliWorks${i}" >
        <img class="portImg" id="work${i}" src="${elem.imgUrl}" alt="">
   
   ${elem.client}
    <a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a>
-    </div> `);//end cards
+    </div> `); //end cards
 
     $(`#like${i}`).click(() => favFunc(i));
     if (elem.fav === false) {
       $(`#like${i}`).removeClass("heart");
-    }else {
+    } else {
       $(`#like${i}`).addClass("heart");
     }
-    
-    
+
     //search
     $("#searchBtn").click(function () {
       const name1 = $("#searchInput").val();
@@ -62,63 +58,43 @@ const randerPortfolio = () => {
         const name = name1.toLowerCase();
         const nameProject = elem.client.toLowerCase();
         console.log(nameProject.includes(name), elem);
-        const arr = works.filter(o => ((o.client.toLowerCase()) === name) || (o.client.toLowerCase().includes(name)));
-        $('#show').html(``);
+        const arr = works.filter(
+          (o) =>
+            o.client.toLowerCase() === name ||
+            o.client.toLowerCase().includes(name)
+        );
+        $("#show").html(``);
         if (arr.length) {
-
           arr.forEach((e, index) => {
-            $('#show').append(`<div class="grid-item" id="portfoliWorks${index}" ><div>
+            $("#show")
+              .append(`<div class="grid-item" id="portfoliWorks${index}" ><div>
        <img id="obj${index}" class="portImg" src="${e.imgUrl}" alt=""></div>
     <div>${e.client}</div>
     <div class="favorite" id="like${index}" ></div>
     </div> `);
 
-            $(`portfoliWorks${index}`).click(() => randerWork(e,index));
-          }
-  
+            $(`#portfoliWorks${index}`).click(() => randerWork(e, index));
+          });
+          $("#show").append(
+            `<p><a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p>`
           );
-          $('#show').append(`<p><a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p>`) 
-        }
-          else {
-            $('#show').append(`
+        } else {
+          $("#show").append(`
   <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
-          }
+        }
+      }
+    }); //end of search
 
-           
-         
-  }
-});//end of search
-
-  
-
-  
-   
-
-
-$(`#work${i}`).click(() => randerWork(elem,i));
-
-
-    
-
-  });//loop end
-
-};//main rander
-
-
-
-
-
-
-
+    $(`#work${i}`).click(() => randerWork(elem, i));
+  }); //loop end
+}; //main rander
 
 const randerfavforite = () => {
   console.log(hi);
-    works.forEach((elem, index) => {
-      localStorage.setItem("works", JSON.stringify(works));
-      location.replace("favorite.html");
-  
-  
-    });
-$("#favNav").click(randerfavforite);
+  works.forEach((elem, index) => {
+    localStorage.setItem("works", JSON.stringify(works));
+    location.replace("favorite.html");
+  });
+  $("#favNav").click(randerfavforite);
 };
 randerPortfolio();
