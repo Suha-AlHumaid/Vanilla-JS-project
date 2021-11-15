@@ -1,7 +1,7 @@
 const works = JSON.parse(localStorage.getItem("works"));
 
 //discription
-const randerWork = (elem,i) => {
+const randerWork = (elem, i) => {
   $("#showFav").hide();
   $("#showFav").html("");
   $("#discContainer").append(
