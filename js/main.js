@@ -34,7 +34,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
   },
 
   {
-    client: "Xtep Stor",
+    client: "Xtep Store",
     tech: `PHP, Magento, Bootstrap, JS`,
     created: "March 3, 2021",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/04/Xtep2-ccit.png`,
@@ -43,7 +43,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
     fav: false,
   },
   {
-    client: "Swiss Corner",
+    client: "Swiss Corner App",
     tech: `SWift`,
     created: "Feb 5, 2020",
     imgUrl: `https://ccit.sa/wp-content/uploads/2021/02/3-8.png`,
@@ -84,6 +84,7 @@ localStorage.setItem("works", JSON.stringify(works));
 //rander of single page discription
 const randerWork = (index) => {
   $("#home").hide();
+  $('html,body').scrollTop(0);
   $("#workPage").addClass("showWork");
   $("#workPage").append(
 
@@ -114,7 +115,9 @@ const worksRander = () => {
 
   works.forEach((elem, index) => {
     $("#workPage").append(
-      `<div class="card" id="card${index}"><img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/></div>`
+      `<div class="card" id="card${index}">
+      <img src="${elem.imgUrl}"" alt="" id="imgCard${index}"/>
+      </div>`
     );
 
     //end of loop

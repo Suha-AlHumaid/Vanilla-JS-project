@@ -23,15 +23,18 @@ body {
 }
 h4 {
   /* color: #704da8; */
+  font-family: 'Exo 2', sans-serif;   
   text-shadow: 2px -10px 2px rgb(101 168 0 / 0%);
   font-size: 1.75rem;
   font-weight: 300;
   text-transform: uppercase;
 }
 h1 {
+  font-family: 'Exo 2', sans-serif;   
   font-size: 5rem;
 }
 p {
+  font-family: 'Exo 2', sans-serif;   
   font-weight: 400;
   font-size: 1.125rem;
   margin: 20px 0 0;
@@ -40,12 +43,16 @@ p {
 h2,
 h3,
 span {
+  font-family: 'Exo 2', sans-serif;   
   color: #704da8;
   text-shadow: 2px -10px 2px rgba(101, 168, 0, 0);
   font-size: 3.75rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
 }
+
+ 
+
 /* Header */
 .header {
   width: 100%;
@@ -85,15 +92,16 @@ span {
 }
 
 .logoImg {
-  width: 140px;
+  width: 160px;
 }
 .navU {
   list-style: none;
 }
 .nav {
+  font-family: 'Exo 2', sans-serif;   
   display: inline;
   padding-left: 15px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-shadow: 2px -10px 2px rgb(101 168 0 / 0%);
   font-weight: 300;
   text-transform: uppercase;
@@ -126,12 +134,12 @@ a {
   position: relative;
 }
 .imgBanner {
-  width: 100%;
-  height: 100vh;
+  width: 95%;
+  height: 95vh;
   border-radius: 50%;
   border: 2rem solid white;
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 0px;
 }
 #circleImg {
@@ -193,6 +201,7 @@ a {
 
 #showFav {
   margin-top: 230px;
+  min-height: 59vh;
 }
 #show {
   /* margin-top: 200px; */
@@ -370,7 +379,7 @@ a {
 }
 .text {
   /* color: white; */
-  width: 200px;
+  width: 238px;
   height: 100px;
   font-size: 2rem;
   position: absolute;
@@ -435,7 +444,7 @@ input[type="text"]:focus {
   border-bottom: 1px solid #ccc;
 }
 .fa {
-  font-size: 17px;
+  font-size: 24px;
   width: 20px;
   height: 20px;
 }

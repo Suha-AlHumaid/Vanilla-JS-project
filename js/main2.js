@@ -9,9 +9,10 @@ function favFunc(index) {
 
 //discription
 const randerWork = (elem, i) => {
-  console.log("hi");
+
   $("#homePortfolio").hide();
   $("#home").hide();
+  $('html,body').scrollTop(0);
   $("#discPage").append(
     `<div class="discContainer">
 <div class="blue "></div>
