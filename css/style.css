@@ -475,7 +475,14 @@ input[type="text"]:focus {
 .like {
   color: #ec3434;
 }
-
+#searchBtn{
+  border: none;
+  background-color: #fffafa00;
+  cursor: pointer;
+}
+#searchInput:focus{
+ border-color: darkgrey;
+}
 .favorite {
   background-color: #f2f2f2;
 }
@@ -490,7 +497,17 @@ input[type="text"]:focus {
 }
 
 .emptyFav{
+
   margin: 0 auto;
+  width: 60%;
+  /* background-color: #f2f2f2; */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  position: relative;
+  left: 55%;
+  justify-content: center;
+  align-items: flex-start;
 }
 @keyframes heart {
   0% {

@@ -37,7 +37,7 @@ const randerFav = () => {
     $("#showFav").html("");
     $("#showFav").append(`
     <div class="emptyFav">
-                <p>Sorry, your favorit is empty..<br>
+                <p>Sorry, your favorite is empty..<br>
                 <a href="portfolio.html" style="color: #3f51b5;">Press here </a>to see our projects .. </p>
                 </div>
                 `);
