@@ -1,5 +1,11 @@
 const works = JSON.parse(localStorage.getItem("works"));
 
+function favFunc(index) {
+  works[index].fav = !works[index].fav;
+  localStorage.setItem("works", JSON.stringify(works));
+  randerFav();
+}
+
 //discription
 const randerWork = (elem, i) => {
   $("#showFav").hide();
@@ -35,13 +41,22 @@ const randerFav = () => {
           // $('#show').html("");
           $("#showFav").append(`
                   <div class="grid-item" id='portfoliWorks${i}' >
-                     <img class="portImg"  id="work${i}"  src="${elem.imgUrl}" alt="">
-                    <p> ${elem.client}</p>
-                  </div> `);
+                     <img class="portImg" id="work${i}"  src="${elem.imgUrl}" alt="">
+                    <div>${elem.client}
+                    <a id="deleFav${i}"  class="fa fa-trash" aria-hidden="true" style=" padding-left: 5px;"></a>
+                  </div>
+                    </div> `);
   
           //end cards
         }
-        $(`#portfoliWorks${i}`).click(() => randerWork(elem, i));
+        $(`#deleFav${i}`).click(() => favFunc(i));
+        if (elem.fav === false) {
+          $(`#like${i}`).removeClass("heart");
+        } else {
+          $(`#like${i}`).addClass("heart");
+        }
+
+        $(`#work${i}`).click(() => randerWork(elem, i));
   
       } //end loop
     );

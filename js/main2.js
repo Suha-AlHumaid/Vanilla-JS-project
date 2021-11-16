@@ -40,9 +40,9 @@ const randerPortfolio = () => {
     $("#show").append(`
     <div class="grid-item" id="portfoliWorks${i}" >
        <img class="portImg" id="work${i}" src="${elem.imgUrl}" alt="">
-  
-  ${elem.client}
-   <a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a>
+  <div>  ${elem.client}
+  <a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a></div>
+
     </div> `); //end cards
 
     $(`#like${i}`).click(() => favFunc(i));
