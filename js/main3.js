@@ -10,7 +10,7 @@ function favFunc(index) {
 const randerWork = (elem, i) => {
   $("#showFav").hide();
   $("#showFav").html("");
-  $('html,body').scrollTop(0);
+  $("html,body").scrollTop(0);
   $("#discContainer").append(
     `<div class="discContainer">
 <div class="blue "></div>
@@ -33,12 +33,23 @@ const randerFav = () => {
   //cards
 
   $("#showFav").html("");
-  if (works.length !==0){
+  if (works.length != 0) {
+    $("#showFav").html("");
+    $("#showFav").append(`
+    <div class="emptyFav">
+                <p>Sorry, your favorit is empty..<br>
+                <a href="portfolio.html" style="color: #3f51b5;">Press here </a>to see our projects .. </p>
+                </div>
+                `);
+    // $("#showFav").css("height", "100vh");
+  }
+
+  if (works.length) {
     works.forEach(
       (elem, i) => {
         if (elem.fav == true) {
           console.log(works);
-          // $('#show').html("");
+          $("#showFav").html("");
           $("#showFav").append(`
                   <div class="grid-item" id='portfoliWorks${i}' >
                      <img class="portImg" id="work${i}"  src="${elem.imgUrl}" alt="">
@@ -46,7 +57,7 @@ const randerFav = () => {
                     <a id="deleFav${i}"  class="fa fa-trash" aria-hidden="true" style=" padding-left: 5px;"></a>
                   </div>
                     </div> `);
-  
+
           //end cards
         }
         $(`#deleFav${i}`).click(() => favFunc(i));
@@ -57,21 +68,9 @@ const randerFav = () => {
         }
 
         $(`#work${i}`).click(() => randerWork(elem, i));
-  
       } //end loop
     );
   }
-  else {
-
-       // $('#show').html("");
-          $('#showFav').append(`
-          <p>Sorry,your favorit is empty..<br>
-          <a href="portfolio.html" style="color: #3f51b5;">Press here </a>to see our projects .. </p>
-          `);
-          $('#showFav').css("height","100vh");
-     
-  }
-
 };
 
 randerFav();

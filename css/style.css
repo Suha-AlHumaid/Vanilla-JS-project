@@ -9,6 +9,7 @@ body {
   word-wrap: break-word;
 }
 .container {
+  /* min-height: 40vh; */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -202,6 +203,8 @@ a {
 #showFav {
   margin-top: 230px;
   min-height: 59vh;
+
+
 }
 #show {
   /* margin-top: 200px; */
@@ -486,6 +489,9 @@ input[type="text"]:focus {
   margin: 0px;
 }
 
+.emptyFav{
+  margin: 0 auto;
+}
 @keyframes heart {
   0% {
     transform: rotate(0deg) scale(1.7);

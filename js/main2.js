@@ -68,11 +68,12 @@ const randerPortfolio = () => {
         if (arr.length) {
           arr.forEach((e, index) => {
             $("#show")
-              .append(`<div class="grid-item" id="portfoliWorks${index}" ><div>
-       <img id="obj${index}" class="portImg" src="${e.imgUrl}" alt=""></div>
-    <div>${e.client}</div>
-    <div class="favorite" id="like${index}" ></div>
-    </div> `);
+              .append(`
+              <div class="grid-item" id="portfoliWorks${index}" ><div>
+             <img id="obj${index}" class="portImg" src="${e.imgUrl}" alt=""></div>
+             <div>${e.client}</div>
+             <div class="favorite" id="like${index}" ></div>
+            </div> `);
 
             $(`#portfoliWorks${index}`).click(() => randerWork(e, index));
           });
@@ -81,7 +82,7 @@ const randerPortfolio = () => {
           );
         } else {
           $("#show").append(`
-  <p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> `);
+        <div><p>Soory,no result.  <a style="color: #8834ec;" href="/portfolio.html">Back to Portfolio</a></p> </div>`);
         }
       }
     }); //end of search
