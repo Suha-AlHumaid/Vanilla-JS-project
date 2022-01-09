@@ -1,4 +1,4 @@
-//  Header Anmation
+//  Header Animation
 $("#home").removeClass("home");
 $(document).ready(function () {
   $("#imgBannerDiv").animate({
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 });
 
-//Informations
+//Information
 
 const works = JSON.parse(localStorage.getItem("works")) || [
 
@@ -81,7 +81,7 @@ const works = JSON.parse(localStorage.getItem("works")) || [
 ];
 localStorage.setItem("works", JSON.stringify(works));
 
-//rander of single page discription
+//rander of single page description
 const randerWork = (index) => {
   $("#home").hide();
   $('html,body').scrollTop(0);
@@ -108,7 +108,7 @@ const randerWork = (index) => {
   //end of forEach
 };
 
-//rander of partfilio
+//rander of portfolio
 const worksRander = () => {
   $("#home").hide();
   $("#workPage").addClass("showWork");

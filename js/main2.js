@@ -7,7 +7,7 @@ function favFunc(index) {
   randerPortfolio();
 }
 
-//discription
+//description
 const randerWork = (elem, i) => {
 
   $("#homePortfolio").hide();
@@ -23,8 +23,6 @@ const randerWork = (elem, i) => {
     <p>${elem.disc}</p>    
     <p>Technologies: ${elem.tech}</p>
     <p> Created: ${elem.created}</p>
-    
-    
     </div>
     </div>
     <div class="dImg"> <img src="${elem.imgUrl2}" alt="image" class="singlePageImg"></div>
@@ -42,7 +40,6 @@ const randerPortfolio = () => {
        <img class="portImg" id="work${i}" src="${elem.imgUrl}" alt="">
   <div>  ${elem.client}
   <a id="like${i}" class="heart fa fa-heart"  aria-hidden="true" style=" padding-left: 5px;"></a></div>
-
     </div> `); //end cards
 
     $(`#like${i}`).click(() => favFunc(i));

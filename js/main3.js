@@ -13,9 +13,9 @@ const randerWork = (elem, i) => {
   $("html,body").scrollTop(0);
   $("#discContainer").append(
     `<div class="discContainer">
-<div class="blue "></div>
-<div class="purple"></div>
-<div class="white">
+    <div class="blue "></div>
+    <div class="purple"></div>
+    <div class="white">
     <div class="t">
     <h1>${elem.client}</h1>
     <p>${elem.disc}</p>    
@@ -45,11 +45,12 @@ const randerFav = () => {
   }
 
   if (works.length) {
+    $("#showFav").html("");
     works.forEach(
       (elem, i) => {
         if (elem.fav == true) {
           console.log(works);
-          $("#showFav").html("");
+          
           $("#showFav").append(`
                   <div class="grid-item" id='portfoliWorks${i}' >
                      <img class="portImg" id="work${i}"  src="${elem.imgUrl}" alt="">
